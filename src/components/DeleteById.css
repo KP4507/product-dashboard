@@ -1,0 +1,33 @@
+.delete-by-id {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.delete-by-id input {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 200px;
+}
+
+.delete-by-id button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  background: #dc2626;
+  color: white;
+  cursor: pointer;
+}
+
+.delete-by-id button:hover {
+  background: #b91c1c;
+}
+
+.delete-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

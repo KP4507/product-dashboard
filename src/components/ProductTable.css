@@ -1,0 +1,71 @@
+.table-container {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-table th,
+.product-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.product-table th {
+  background: #f4f4f4;
+}
+
+.product-table tr:hover {
+  background: #f9f9f9;
+}
+
+.stock {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.stock.in {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.stock.out {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.delete-btn {
+  color: #dc2626;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  text-decoration: underline;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  background: #f3f4f6;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
