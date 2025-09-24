@@ -22,3 +22,13 @@
 .form button:hover {
   background: #3730a3;
 }
+
+@media (max-width: 640px) {
+  .form {
+    flex-direction: column;
+  }
+  .form input,
+  .form button {
+    width: 100%;
+  }
+}

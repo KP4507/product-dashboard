@@ -15,12 +15,14 @@ export default function App() {
   const [message, setMessage] = useState("");
   const [messageType, setMessageType] = useState("success");
 
-  // Fetch products from API
+  // Fetch products
   useEffect(() => {
     async function fetchProducts() {
       setLoading(true);
       try {
-        const res = await fetch("https://coding-test-pink.vercel.app/api/products");
+        const res = await fetch(
+          "https://coding-test-pink.vercel.app/api/products"
+        );
         const data = await res.json();
         setProducts(data);
         setFiltered(data);
@@ -52,7 +54,7 @@ export default function App() {
     setTimeout(() => setMessage(""), 3000);
   };
 
-  // Delete product (from table or by ID)
+  // Delete product
   const handleDelete = async (id) => {
     if (!window.confirm(`Are you sure you want to delete product with ID "${id}"?`)) return;
     try {
@@ -75,16 +77,12 @@ export default function App() {
 
       {message && <p className={`message ${messageType}`}>{message}</p>}
 
-      {/* Form to add new product */}
       <ProductForm onAdd={handleAdd} />
 
-      {/* Delete by ID feature */}
       <DeleteById onDelete={handleDelete} />
 
-      {/* Filters & sorting */}
       <Filters filters={filters} setFilters={setFilters} setSortOrder={setSortOrder} />
 
-      {/* Product table */}
       {loading ? (
         <p className="loading">Loading products...</p>
       ) : (

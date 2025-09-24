@@ -3,10 +3,9 @@ import "./ProductTable.css";
 
 export default function ProductTable({ products, onDelete }) {
   const [page, setPage] = useState(1);
-  const perPage = 20; // products per page
+  const perPage = 10;
   const totalPages = Math.ceil(products.length / perPage);
 
-  // Get current page products
   const current = products.slice((page - 1) * perPage, page * perPage);
 
   return (
@@ -28,7 +27,7 @@ export default function ProductTable({ products, onDelete }) {
               <td>{p.category || "N/A"}</td>
               <td>{p.price !== undefined ? Number(p.price).toFixed(2) : "0.00"}</td>
               <td>
-                <span className={p.inStock ? "stock in" : "stock out"}>
+                <span className={`stock ${p.inStock ? "in" : "out"}`}>
                   {p.inStock ? "In Stock" : "Out of Stock"}
                 </span>
               </td>
@@ -42,7 +41,6 @@ export default function ProductTable({ products, onDelete }) {
         </tbody>
       </table>
 
-      {/* Pagination */}
       <div className="pagination">
         <button disabled={page === 1} onClick={() => setPage((p) => p - 1)}>
           Prev

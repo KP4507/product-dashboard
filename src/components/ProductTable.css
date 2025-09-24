@@ -6,6 +6,7 @@
 .product-table {
   width: 100%;
   border-collapse: collapse;
+  min-width: 600px;
 }
 
 .product-table th,
@@ -40,32 +41,44 @@
 }
 
 .delete-btn {
-  color: #dc2626;
+  color: #fff;
+  background-color: #dc2626;
   border: none;
-  background: none;
+  border-radius: 6px;
   cursor: pointer;
+  padding: 6px 12px;
 }
 
 .delete-btn:hover {
-  text-decoration: underline;
+  background-color: #b91c1c;
 }
 
 .pagination {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin-top: 10px;
+  gap: 15px;
+  margin-top: 15px;
 }
 
 .pagination button {
-  padding: 6px 12px;
+  padding: 8px 14px;
   border: 1px solid #ccc;
-  background: #f3f4f6;
   border-radius: 6px;
+  background-color: #f3f4f6;
   cursor: pointer;
 }
 
 .pagination button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  .product-table th, .product-table td {
+    padding: 8px;
+  }
+  .delete-btn {
+    padding: 4px 8px;
+  }
 }

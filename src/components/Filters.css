@@ -11,3 +11,9 @@
   border-radius: 6px;
   border: 1px solid #ccc;
 }
+
+@media (max-width: 640px) {
+  .filters {
+    flex-direction: column;
+  }
+}

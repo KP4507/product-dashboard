@@ -7,7 +7,7 @@ export default function DeleteById({ onDelete }) {
 
   const handleSearch = () => {
     if (!searchId) return;
-    setFound(true); // In real app, you can check if ID exists in products
+    setFound(true);
   };
 
   const handleDelete = () => {

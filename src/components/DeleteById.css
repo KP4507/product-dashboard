@@ -31,3 +31,18 @@
   align-items: center;
   gap: 10px;
 }
+
+@media (max-width: 640px) {
+  .delete-by-id {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .delete-by-id input,
+  .delete-by-id button {
+    width: 100%;
+  }
+  .delete-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
